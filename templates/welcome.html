@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <title>Welcome to Career Compass: Your Pathway to Success</title>
+</head>
+<body>
+    <nav class="container-fluid">
+        <ul>
+            <li><strong><a href="{{ url_for('welcome') }}">Career Compass: Your Pathway to Success</a></strong></li>
+        </ul>
+        <ul>
+            <li><a href="#">About</a></li>
+        </ul>
+    </nav>
+     <main class="container">
+        <div class="grid">
+            <section>
+                <hgroup>
+                    <h1>Welcome to Career Compass: Your Pathway to Success</h1>
+                    <h3>Crafting the Blueprint for Placement Triumph: Paving the Way to Achieving Your Goals</h3>
+                </hgroup>
+                <p>Our platform tailors individualized suggestions, guiding job seekers towards ideal opportunities aligned with their talents and ambitions. Simultaneously, it empowers recruiters to uncover top-notch candidates ideally matched to their open positions.</p>
+
+                <figure>
+                    <img src="https://b2bblogassets.airtel.in/wp-content/uploads/2022/06/startup-company-scaled.jpg" alt="Career Pathways" />
+                </figure>
+                <button id="getStartedBtn" class="primary" style="margin-bottom: 20px;">Get Started</button>
+            </section>
+        </div>
+    </main>
+    <script>
+        document.getElementById('getStartedBtn').addEventListener('click', function() {
+    window.location.href = '{{ url_for('choice') }}';
+});
+    </script>
+
+</body>
+</html>
+ 
