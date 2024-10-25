@@ -1,64 +1,116 @@
+# Job Placement Recommendation System 🎯
 
-# python-placement-recommendation-system
+A Flask-based web application that provides personalized job recommendations using machine learning algorithms. The system serves both job seekers and recruiters, creating an efficient bridge between talent and opportunities.
 
-A simple job recommendation system project (using Python)!
+## 🌟 Features
 
+### For Job Seekers
+- User registration and authentication
+- Personalized job recommendations based on:
+  - Skills
+  - Experience level
+  - Job title preferences
+- Track and view recommendation history
 
-#### Scope of the system
-This project is a Flask-based web application designed for both job seekers and recruiters. Users can sign up, log in, and receive personalized job recommendations based on their skills, experience, and job title. Recruiters can log in to view job listings and the list of candidates recommended for their job postings. The application provides a user-friendly platform and aims to streamline the job placement and recruitment process for both job seekers and recruiters.
+### For Recruiters
+- Secure company login portal
+- Access to job listings
+- View recommended candidates for positions
+- Manage job postings
 
-#### Software Requirements
-- Frontend: HTML, CSS, JavaScript
-- Backend: Python with Flask
-- Database: PostgreSQL
-- Operating System: Linux
-- Data Science: Python libraries (Pandas, NumPy, Scikit-learn) for the recommendation algorithm.
+## 🛠️ Technology Stack
 
-#### Hardware Requirements
-- Standard personal computer or laptop.
+- **Frontend:** HTML, CSS, JavaScript
+- **Backend:** Python (Flask)
+- **Database:** PostgreSQL
+- **Machine Learning:** 
+  - Pandas
+  - NumPy
+  - Scikit-learn
+- **Operating System:** Linux
 
-#### Files Included
-- app.py: The main Flask application code.
-- jobs1.py: The Python code containing the job recommendation logic.
-- jobs_info.csv: The CSV file containing the job data including job ID, company ID, - job salary, job experience, key skills, role category, functional area, industry, and job title.
-- companies_table.txt: Contains the SQL statements to manually create the ‘companies’ table and insert 50 companies values including company_id, company_pwd, company and domain.
-- templates: The directory containing the HTML templates.
+## 📋 Prerequisites
 
-### Operational Instructions
+- Python 3.x
+- PostgreSQL
+- pip package manager
 
-1. Setting up the Environment:
-- Ensure you have Python installed on your system.
-- Install the required Python packages using pip. You can do this by running the following command in your terminal or command prompt:
+## 🚀 Installation and Setup
+
+1. **Clone the repository**
+```bash
+git clone https://github.com/yourusername/python-placement-recommendation-system.git
+cd python-placement-recommendation-system
+```
+
+2. **Install required packages**
 ```bash
 pip install flask psycopg2-binary pandas scikit-learn numpy werkzeug
 ```
 
-2. Setting up the Database:
-- Ensure you have PostgreSQL installed on your system.
-- Create a new database named 'placement' using the following SQL command:
-```bash
+3. **Database Setup**
+```sql
 CREATE DATABASE placement;
 ```
-- Also change your postgres password to 'project'.
-- After creating the database, you need to create the 'companies' table manually as follows:
-  - Copy the SQL statements provided in 'companies_table.txt'.
-  - Paste them into your SQL client or command line interface connected to your PostgreSQL database.
-  - Execute the SQL statements to create the ‘companies’ table and populate it with data.
+- Set PostgreSQL password to 'project'
+- Execute the SQL statements from 'companies_table.txt' to create and populate the companies table
 
-3. Running the Application:
-- Navigate to the directory containing the ‘app.py’, ‘jobs1.py’, and ‘jobs_info.csv’ files using your terminal or command prompt.
-- Run the Flask application by executing the ‘app.py’ file:
+4. **Run the application**
 ```bash
 python3 app.py
 ```
 
-4. Using the Application:
-- Once the application is running, visit ‘http://localhost:5000’ in your web browser.
-- You will be directed to the welcome page.
-- Click on ‘Get Started’ and select your role.
-- If you’re a job seeker, login with your valid credentials. If you do not have an account, signup and enter your details. After successful login/signup, click on ‘Recommend jobs for me’ and you will get the first 10 recommendations based on your years of experience, skills and job title.
-- The user details will be stored in the ‘userinfo’ table and the recommendations received will be stored in the ‘recommendations’ table.
-- If you’re a recruiter, login with the company ID and password (which are stored in the ‘companies’ table). After successful login, you can either view eligible candidates, or the current job postings of the company.
-- To logout, click on the Log Out button on the navigation bar. You will be redirected to the welcome page.
+## 📁 Project Structure
 
-## Kudos <3
+```
+├── app.py                 # Main Flask application
+├── jobs1.py              # Job recommendation logic
+├── jobs_info.csv         # Job dataset
+├── companies_table.txt   # SQL statements for companies table
+└── templates/            # HTML templates
+```
+
+## 🎯 Usage
+
+1. Visit `http://localhost:5000` in your web browser
+2. Click "Get Started" and select your role
+
+### For Job Seekers:
+- Sign up or log in with your credentials
+- Click "Recommend jobs for me" to get personalized recommendations
+- View your top 10 job matches based on your profile
+
+### For Recruiters:
+- Log in using company ID and password
+- Access candidate listings and job postings
+- Manage company job listings
+
+## 💾 Database Schema
+
+### Companies Table
+- company_id
+- company_pwd
+- company
+- domain
+
+### UserInfo Table
+- User registration details
+- Profile information
+
+### Recommendations Table
+- Stores user-specific job recommendations
+- Tracking of recommendation history
+
+## 🔒 Security Features
+
+- Password hashing for user accounts
+- Secure session management
+- Protected recruiter portal
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 👥 Authors
+
+- Arulmurugan S
